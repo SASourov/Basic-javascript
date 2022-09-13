@@ -1,0 +1,422 @@
+IBBL A/C : 20507770204168166
+
+8.
+//calculator
+var num1= prompt("Enter Your First Number: ");
+var num2= prompt("Enter Your Second Number: ");
+num1 =parseInt(num1, 10);
+num2 =parseInt(num2, 10);
+
+cal = num1 + num2;
+document.write( num1 + " + " + num2 +" = " + cal + "<br>");
+
+cal = num1 - num2;
+document.write( num1 + " - " + num2 +" = " + cal + "<br>");
+
+cal = num1 * num2;
+document.write( num1 + " * " + num2 +" = " + cal + "<br>");
+
+cal = num1 / num2;
+document.write( num1 + " / " + num2 +" = " + cal + "<br>");
+
+
+9.
+//area of any kind of Shape
+
+//square shape
+ var base =parseFloat(prompt("Enter Base"));
+ var height =parseFloat(prompt("Enter Height"));
+
+ area = base * height;
+
+document.write(area);
+
+//triangle
+var base =parseFloat(prompt("Enter Base"));
+var height =parseFloat(prompt("Enter Height"));
+
+area = (base * height) / 2;
+
+document.write(area);
+
+
+10.
+//temperature
+//Fahrenheit to celsius
+
+var far = parseFloat(prompt("Enter your input: "));
+
+far = (far - 32) * (5/9);
+document.write("Celcius = " + far);
+
+
+//celcius to farenheit
+
+var cel = parseFloat(prompt("Enter your input "));
+
+cel = (cel*(9/5))+32;
+
+document.write(cel);
+
+
+11.
+//Relation operation and logical operation
+//relation operation ==, ===, !=, !==, <, <=,  >, >=
+//logical operation ||, !, ->, &&
+a.
+var num1= 20;
+var num2 = 25;
+
+num = (num1 > num2);
+document.write(num);
+
+
+b.
+var num1= parseFloat(prompt("Enter a Number: "));
+var num2= parseFloat(prompt("Enter a Number: "));
+
+var num = num1 > num2;
+
+document.write("Your Result Is: " + num);
+
+c. &&(and operation): sob condition right hole output asbe true, jekono ekta condition na millei output asbe false|
+var num1= parseFloat(prompt("Enter a Number: "));
+var num2= parseFloat(prompt("Enter a Number: "));
+var num3= parseFloat(prompt("Enter a Number: "));
+
+var num = num1 > num2 && num1 < num3;
+
+document.write("Your Result Is: " + num);
+
+d. ||(or operation):jekono ekta condition na millei output asbe true.
+
+var num1= parseFloat(prompt("Enter a Number: "));
+var num2= parseFloat(prompt("Enter a Number: "));
+var num3= parseFloat(prompt("Enter a Number: "));
+
+var num = num1 > num2 || num1 < num3;
+
+document.write("Your Result Is: " + num);
+
+
+12. 
+Operator & If/Else
+//grading
+
+var marks= prompt("Enter Marks");
+
+if (marks >= 80 && marks <= 100)
+  document.write("A+");
+
+else if (marks >= 70 && marks <= 79 )
+  document.write("A");
+
+else if (marks >= 60 && marks <= 69 )
+  document.write("A-");
+
+else if (marks >= 50 && marks <= 59 )
+  document.write("B");
+
+else if (marks >= 40 && marks <= 49 )
+  document.write("C");
+
+else if (marks >= 33 && marks <= 39)
+  document.write("D");
+
+else
+  document.write("Fail");
+
+B. //vowel/consonant
+
+var letter = prompt("Enter a letter");
+
+if(letter == "A" || letter == "a" || letter == "E" || letter == "e" || letter == "I" || letter == "i" || letter == "O" || letter == "o" || letter == "U" || letter == "u")
+        document.write("The Letter Is Vowel");
+
+else
+        document.write("It's Consonant");
+
+
+//vowel/Consonant (Better Rules)
+
+let letter=prompt("Enter a letter");
+
+letter= letter.toLowerCase();
+
+if (letter=="a"|| letter=="e" || letter=="i" || letter=="o" || letter=="u")
+document.write("This is vowel");
+
+else
+document.write("This is consonant");
+
+
+//vowel/consonant using switch,case break, default.
+
+let letter = prompt("Enter a letter");
+
+letter = letter.toLowerCase();
+
+switch (letter) {
+     case "a" :
+     case "e" :
+     case "i" :
+     case "u" :
+
+    document.write("Vowel");
+    break;
+    
+     default :
+        document.write("Consonant");
+}
+
+ 
+
+
+C. //even/odd
+
+let num=prompt("Enter a number");
+
+if (num % 2 ==0)
+document.write("Even");
+
+else
+document.write("Odd");
+
+//even/odd (another)
+
+let num=prompt("Enter a number");
+
+if (num % 2 ==0)
+document.write("Even");
+
+else if (num % 2 != 0)
+document.write("Odd");
+
+
+13.
+//Loop
+//For loop
+
+for (var x = 10; x >= 1; x= x - 1)
+{
+        document.write(" "  + x);
+}
+
+//do while loop
+var x = 1;
+
+do{
+    document.write(" " + x);
+    x ++;
+}while(x<=20); 
+
+//break
+for (x=1; x<= 100; x++){
+    if(x==20){
+        break;
+    }
+
+    document.write(" "+ x);
+
+}
+
+  if(x==20){
+        break;
+ }
+
+
+//continue
+for (x=1; x<= 100; x++){
+    if(x==20){
+        continue;
+    }
+
+    document.write(" "+ x);
+}
+
+//print odd number with continue 
+for (x=1; x<= 100; x++){
+    if(x % 2 == 0){
+        continue;
+    }
+
+    document.write(" "+ x);
+}
+
+//print even number with continue 
+for (x=1; x<= 100; x++){
+    if(x % 2 != 0){
+        continue;
+    }
+
+    document.write(" "+ x);
+}
+
+14. 
+//ternary condition
+
+// positive number or negative number
+
+var number =prompt("Enter a number");
+var result = number >0 ? "Positive" : "Negative"
+    document.write(result);
+
+15. 
+
+//Function
+function square()
+{
+    var num = 5;
+    result = num* num;
+    document.write("Result = " + result);
+}
+square();
+
+//creat a function
+
+function square(num)
+{
+    result = num* num;
+    document.write("Result = " + result);
+}
+square(6);
+
+
+// add by function
+function add(x,y)
+{
+    result = x + y;
+    document.write("Result = " + result +"<br>");
+}
+
+// subtraction by function
+function sub(x,y)
+{
+    result = x - y;
+    document.write("Result = " + result +"<br>");
+}
+
+//Multipole by function
+function multipole(x,y)
+{
+    result = x * y;
+    document.write("Result = " + result +"<br>");
+}
+
+// Divsion by function
+function division(x,y)
+{
+    result = x / y;
+    document.write("Result = " + result +"<br>");
+}
+
+// Vagses by function
+function vagses(x,y)
+{
+    result = x % y;
+    document.write("Result = " + result +"<br>");
+}
+
+add(30,10);
+sub(30,10);
+multipole(30,10);
+division(30,10);
+vagses(30,10);
+
+16.
+// Array
+
+var num1 = ["Asha", "Jebin", "Shakil", "Nahid"];
+var num2 = [1, 2, 3,]
+
+num1.push("Sourov");
+num1.unshift("Rakib");
+
+num = num1.concat(num2);
+document.write(num1 +"<br>");
+document.write(num);
+
+
+//1D array with for loop
+//Create a function called highestScore
+//recive a 1d array called score
+//return the highest score
+function highestScore(scores) {
+  var max =scores[0]; 
+
+  for (x = 0; x < scores.length ; x ++)
+     if (x < scores[x]){
+        max = scores[x];
+     }
+     return max;
+}
+var scores = [20, 28, 15, 88, 1, 99, 101];
+var maxScore = highestScore(scores);
+document.write(maxScore);
+
+//2D array with for loop
+//Creaye a function called highestRunScore
+//recive a 2d array called playersInfo
+//based on high score, return the name of player
+
+function highestRunScore(playersInfo) {
+
+  var highScore = playersInfo[0] [0];
+  var highScore = playersInfo[0] [1];
+
+  for (x = 1; x < playersInfo.length; x++){
+    if ( x < playersInfo [x] [1])
+    highScore = playersInfo[x] [1];
+    highScore = playersInfo [x] [0];
+  }
+   return highScore;
+}
+var playersInfo = [
+    ["Ashraful", 96],
+    ["Mizan", 52],
+    ["Rakib", 45],
+    ["Sakib", 101],
+];
+
+var name = highestRunScore(playersInfo);
+
+document.write(name);
+
+
+17.
+//Object
+var student1={
+    name: "Akkas Ali",
+    age: 23,
+    cgpa: 2.76,
+    language:["Bangla", "English", "Hindi"]
+}
+
+var student2={
+    name: "Akash",
+    age: 22,
+    cgpa: 26,
+    language:["Bangla", "English", "Hindi"]
+}
+
+var student3={
+    name: "Abir Hasan",
+    age: 23,
+    cgpa: 2.06,
+    language:["Bangla", "English", "Hindi"]
+}
+console.log(student1.language);
+
+//Object more simplycity by using function
+function Student(name,age,cgpa,language){
+    this.name = name;
+    this.age = age;
+    this.cgpa = cgpa;
+    this.language = language;
+}
+
+var student1= new Student("Akkas Ali", 23, 2.76, ["Bangla", "English", "Hindi"] );
+var student2= new Student ("ABul", 22, 2.89, ["Bangla", "English", "Hindi"] );
+var student3= new Student("Kashem", 25, 2.09, ["Bangla", "English", "Hindi"] );
+
+console.log(student1);
